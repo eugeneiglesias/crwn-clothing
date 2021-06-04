@@ -1,0 +1,15 @@
+.directory-menu {
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    justify-content: space-between;
+  }
+
+
+  @media (max-width: 600px) {
+    .directory-menu {
+      display: block;
+      flex-direction: column;
+    }
+  }
