@@ -1,8 +1,7 @@
 .collection-item {
-    width: 22%;
-    display: flex;
-    flex-direction: column;
-    height: 350px;
+    flex: 22%;
+    padding: 1%;
+    height: 250px;
     align-items: center;
   
     .image {
@@ -27,7 +26,25 @@
   
       .price {
         width: 10%;
+        text-align: right;
       }
     }
   }
-  
+
+/* On screens that are 992px wide or less, go from four columns to two columns */
+@media screen and (max-width: 992px) {
+  .collection-item {
+    flex: 40%;
+    height: 40vw;
+    margin-bottom: 2em;
+  }
+}
+
+/* On screens that are 992px wide or less, go from four columns to two columns */
+@media screen and (max-width: 600px) {
+  .collection-item {
+    flex: 80%;
+    height: 70vw;
+    margin-bottom: 2em;
+  }
+}
