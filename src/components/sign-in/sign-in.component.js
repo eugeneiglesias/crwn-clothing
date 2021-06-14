@@ -8,7 +8,6 @@ import { signInWithGoogle } from "../../firebase/firebase.utils";
 
 import { auth } from "../../firebase/firebase.utils";
 
-
 import "./sign-in.styles.scss";
 
 class SignIn extends Component {
@@ -24,14 +23,12 @@ class SignIn extends Component {
     event.preventDefault();
     const { email, password } = this.state;
 
-    try{
-
-        await auth.signInWithEmailAndPassword(email, password);
-        this.setState({ email:'', password:''});
-
-
-    } catch (error) { console.log(error); }
-
+    try {
+      await auth.signInWithEmailAndPassword(email, password);
+      this.setState({ email: "", password: "" });
+    } catch (error) {
+      console.log(error);
+    }
 
     this.setState({ email: "", password: "" });
   };
@@ -67,7 +64,11 @@ class SignIn extends Component {
             <CustomButton type="submit" value="Submit Form">
               Sign In
             </CustomButton>
-            <CustomButton onClick={signInWithGoogle} isGoogleSignIn>
+            <CustomButton
+              onClick={signInWithGoogle}
+              isGoogleSignIn
+              type="button"
+            >
               Sign In With Google
             </CustomButton>
           </div>

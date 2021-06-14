@@ -12,6 +12,7 @@ a:hover {
   color: #5e5e5e;
 }
 
+/*universal fix for box sizing*/
 * {
   box-sizing: border-box;
 }
